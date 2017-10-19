@@ -1,7 +1,6 @@
 /* eslint-disable react/jsx-no-bind */
-import { h, Component } from 'preact';
 import { Motion } from 'data-driven-motion';
-import { doMatrixCheck, getMatrixDimensions } from 'matrix-magic';
+import { getMatrixDimensions } from 'matrix-magic';
 import styled from 'preact-emotion';
 import { makeCoordinateArray as makeMatrixArray } from './Matrix';
 import { makeCoordinateArray as makeArrayArray } from './Array';
@@ -197,7 +196,7 @@ const DataView = ({ matrix, type, label, styles, logTable = false }) => {
 					{componentGetter(type)}
 				</svg>
 				<TypeDisplay>
-					Data type: {type}
+          Data type: {type}
 				</TypeDisplay>
 			</Display>
 		</Bin>
