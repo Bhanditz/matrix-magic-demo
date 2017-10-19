@@ -10,7 +10,7 @@ import { minDevice } from '../../lib/css';
 import { max, min } from 'd3-array';
 import { scaleLinear } from '@vx/scale/build/index';
 
-const STIFF_SPRING = { stiffness: 1028, damping: 36 };
+const SPRING = { stiffness: 512, damping: 35 };
 const borderRadius = '10px';
 
 const Bin = styled.div`
@@ -142,11 +142,11 @@ const getComponent = (data, styles) => outputType => {
 				width: 0
 			})}
 			onRender={({ x = 0, y = 0, height = 0, width = 0 }, i, spring) => ({
-				x: spring(x),
-				y: spring(y),
-				height: spring(height, STIFF_SPRING),
-				width: spring(width, STIFF_SPRING),
-				opacity: spring(1, STIFF_SPRING)
+				x: spring(x, SPRING),
+				y: spring(y, SPRING),
+				height: spring(height, SPRING),
+				width: spring(width, SPRING),
+				opacity: spring(1, SPRING)
 			})}
 			onRemount={({ x = 0, y = 0, height = 0, width = 0 }, i) => ({
 				x: 0,
@@ -156,11 +156,11 @@ const getComponent = (data, styles) => outputType => {
 				opacity: 0
 			})}
 			onUnmount={({ x = 0, y = 0, height = 0, width = 0 }, spring) => ({
-				x: spring(x, STIFF_SPRING),
-				y: spring(y, STIFF_SPRING),
-				height: spring(0, STIFF_SPRING),
-				width: spring(0, STIFF_SPRING),
-				opacity: spring(0, STIFF_SPRING)
+				x: spring(x, SPRING),
+				y: spring(y, SPRING),
+				height: spring(0, SPRING),
+				width: spring(0, SPRING),
+				opacity: spring(0, SPRING)
 			})}
 		/>
 	);
