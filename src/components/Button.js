@@ -1,7 +1,7 @@
-import { h, Component } from "preact";
-import { css } from "emotion";
-import styled from "preact-emotion";
-import { minDevice } from "../lib/css";
+import { h, Component } from 'preact';
+import { css } from 'emotion';
+import styled from 'preact-emotion';
+import { minDevice } from '../lib/css';
 
 const borderRadius = `5px;`;
 const onColor = `background-color: black`;
@@ -28,12 +28,12 @@ const OnButton = styled.div`${btn} ${onColor};`;
 const OffButton = styled.div`${btn} ${offColor};`;
 
 const Button = ({ transformObj, action }) => {
-  const { on, label } = transformObj;
+	const { on, label } = transformObj;
 
-  if (on) {
-    return <OnButton onClick={() => action(transformObj)}>{label}</OnButton>;
-  }
-  return <OffButton onClick={() => action(transformObj)}>{label}</OffButton>;
+	if (on) {
+		return <OnButton onClick={() => action(transformObj)}>{label}</OnButton>;
+	}
+	return <OffButton onClick={() => action(transformObj)}>{label}</OffButton>;
 };
 
 export default Button;

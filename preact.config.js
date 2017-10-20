@@ -1,7 +1,7 @@
 export default (config, env, helpers) => {
-  let { rule } = helpers.getLoadersByName(config, "babel-loader")[0];
-  let babelConfig = rule.options;
+	let { rule } = helpers.getLoadersByName(config, 'babel-loader')[0];
+	let babelConfig = rule.options;
 
-  babelConfig.plugins.push("emotion");
-  // babelConfig.env = { ...some settings... }
+	babelConfig.plugins.push('emotion');
+	// babelConfig.env = { ...some settings... }
 };
