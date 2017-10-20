@@ -1,9 +1,9 @@
-import { h, Component } from "preact";
-import GitHub from "react-icons/lib/go/mark-github";
-import Twitter from "react-icons/lib/ti/social-twitter";
-import { css } from "emotion";
-import styled from "preact-emotion";
-import { minDevice } from "../lib/css";
+import { h, Component } from 'preact';
+import GitHub from 'react-icons/lib/go/mark-github';
+import Twitter from 'react-icons/lib/ti/social-twitter';
+import { css } from 'emotion';
+import styled from 'preact-emotion';
+import { minDevice } from '../lib/css';
 
 const TitleBin = styled.div`
   grid-area: title;
@@ -50,35 +50,35 @@ const Code = styled.div`
 const Desc = styled.div`margin: 1em 0;`;
 
 const Title = () => {
-  const len = "1.5em";
-  return (
-    <TitleBin>
-      <Top>Matrix Magic</Top>
-      <Name>PJ Trainor</Name>
-      <Social>
-        <a href="https://github.com/trainorpj/matrix-magic">
-          <GitHub
-            className={css`margin-right: 0.5em;`}
-            width={len}
-            height={len}
-          />
-        </a>
-        <a href="https://twitter.com/pj_trainor">
-          <Twitter
-            className={css`margin-left: 0.5em;`}
-            width={len}
-            height={len}
-          />
-        </a>
-      </Social>
-      <Desc>
+	const len = '1.5em';
+	return (
+		<TitleBin>
+			<Top>Matrix Magic</Top>
+			<Name>PJ Trainor</Name>
+			<Social>
+				<a href="https://github.com/trainorpj/matrix-magic">
+					<GitHub
+						className={css`margin-right: 0.5em;`}
+						width={len}
+						height={len}
+					/>
+				</a>
+				<a href="https://twitter.com/pj_trainor">
+					<Twitter
+						className={css`margin-left: 0.5em;`}
+						width={len}
+						height={len}
+					/>
+				</a>
+			</Social>
+			<Desc>
         A library to manipulate, slice, and do other fun things with matrices
-      </Desc>
-      <Code>
-        <code>npm install --save matrix-magic</code>
-      </Code>
-    </TitleBin>
-  );
+			</Desc>
+			<Code>
+				<code>npm install --save matrix-magic</code>
+			</Code>
+		</TitleBin>
+	);
 };
 
 export default Title;

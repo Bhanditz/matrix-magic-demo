@@ -1,8 +1,8 @@
-import { h, Component } from "preact";
-import { css } from "emotion";
-import styled from "preact-emotion";
-import Button from "./Button";
-import { minDevice } from "../lib/css";
+import { h, Component } from 'preact';
+import { css } from 'emotion';
+import styled from 'preact-emotion';
+import Button from './Button';
+import { minDevice } from '../lib/css';
 
 const handheld = minDevice(`
   margin: 1em 5px;
@@ -19,14 +19,10 @@ const ButtonBin = styled.div`
   ${handheld};
 `;
 
-const TransformButtons = ({ transforms, action }) => {
-  return (
-    <ButtonBin>
-      {transforms.map((d, i) => {
-        return <Button key={i} transformObj={d} action={action} />;
-      })}
-    </ButtonBin>
-  );
-};
+const TransformButtons = ({ transforms, action }) => (
+	<ButtonBin>
+		{transforms.map((d, i) => <Button key={i} transformObj={d} action={action} />)}
+	</ButtonBin>
+);
 
 export default TransformButtons;

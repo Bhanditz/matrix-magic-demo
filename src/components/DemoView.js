@@ -1,8 +1,8 @@
-import { h, Component } from "preact";
-import { css } from "emotion";
-import styled from "preact-emotion";
-import DataView from "./DataView";
-import { minDevice } from "../lib/css";
+import { h, Component } from 'preact';
+import { css } from 'emotion';
+import styled from 'preact-emotion';
+import DataView from './DataView';
+import { minDevice } from '../lib/css';
 
 const handheld = minDevice(`
   flex-direction: column;
@@ -17,24 +17,22 @@ const View = styled.div`
   ${handheld};
 `;
 
-const DemoView = ({ matrix, fcn, label, type, styles }) => {
-  return (
-    <View>
-      <DataView
-        matrix={matrix}
-        label={"Input"}
-        type={"matrix"}
-        styles={styles}
-      />
-      <DataView
-        matrix={fcn(matrix)}
-        label={label}
-        type={type}
-        styles={styles}
-        logTable={true}
-      />
-    </View>
-  );
-};
+const DemoView = ({ matrix, fcn, label, type, styles }) => (
+	<View>
+		<DataView
+			matrix={matrix}
+			label={'Input'}
+			type={'matrix'}
+			styles={styles}
+		/>
+		<DataView
+			matrix={fcn(matrix)}
+			label={label}
+			type={type}
+			styles={styles}
+			logTable
+		/>
+	</View>
+);
 
 export default DemoView;

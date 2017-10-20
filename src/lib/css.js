@@ -1,4 +1,4 @@
-import { css } from "emotion";
+import { css } from 'emotion';
 
 export const minDevice = styles => css`
   @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
